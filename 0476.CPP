@@ -1,0 +1,13 @@
+#include<iostream.h>
+int main(){
+char c;
+char vowels;
+cout<<"enter an character :";
+cin>>c;
+vowels=(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
+if(vowels)
+cout<<"the given character is vowel"<<c;
+else
+cout<<"the given character is consonant"<<c;
+return 0;
+}
