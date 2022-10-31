@@ -1,52 +1,33 @@
-#include<iostream>
-#include<string.h>
-using namespace std;
+#include<stdio.h>
 int main()
 {
-	int c;
-	char a[100],b[100];
-	int d,e,div,rev=0;
-	cout<<"enter your choice:";
-	cin>>c;
-	switch(c)
+	int arr[10],i,num,n,cnt=0,pos;
+	cout"\n enter arraay size :";
+	cin>>n;
+	cout<<"\n enter array elements : \n ";
+	for(i=0;i<n;i++)
 	{
-		case 1:
-			cout<<"enter a string:";
-			cin>>a;
-			strcpy(b,a);
-			strrev(a);
-			if(strcmp(a,b)==0)
-			{
-				cout<<"its a pakindrome";
-			}
-			else
-			{
-				cout<<"its not a palindrome";
-				
-			}
-			break;
-		case2:
-			cout<<"enter number:";
-			cin>>d;
-			e=d;
-			while(d>0)
-			{
-				div=d%10;
-				rev=(rev*10)+div;
-				d=d/10;
-			}
-			if(e==rev)
-			{
-				cout<<"its palindrome";
-			}
-			else
-			{
-				cout<<"its not a palindrome";
-				
-			}
-			break;
-		default:
-			cout<<"enter right choice";
-			break;
+		cout<<" ";
+		cin>>arr[i];
 	}
+	cout<<"\n enter elementsto be serched :";
+	cin>>num;
+	for(i=0;i<n;i++)
+	{
+		if(arr[i]==num)
+		{
+			cnt=1;
+			pos=i+1;
+			break;
+		}
+	}
+	if(cnt==0)
+	{
+		cout<<"\n elements not found....!";
+	}
+	else
+	{
+		cout<<"\n elements"<<num<<"found at position"<<pos;
+	}
+	return 0;
 }
